@@ -6,7 +6,7 @@ body {
     color: #1b262c;
     
     margin: 0;
-    background-color: #5f6769;
+    background-color: #c2edf8;
 }
 
 /* efectos para el contenedor de pantalla completa */
@@ -38,7 +38,7 @@ body {
     max-width: 900px;
     width: 90%;
     
-    background-color: #5f6769;
+    background-color: #03009c;
     
     /*opacity: 0.50;
     filter: alpha(opacity=50);*/
