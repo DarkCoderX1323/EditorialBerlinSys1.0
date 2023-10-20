@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Editorial Berlin - Tienda en Línea</title>
-    <link rel="stylesheet" href="menu.css">
+    <title>Detalle del Artículo - Editorial Berlin</title>
+    <link rel="stylesheet" href="detalle_producto.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="https://editorialberlin.com/wp-content/uploads/2022/02/logo-berlin-1-e1629321593429.png" alt="Logo de Editorial Berlin">
+                <img src="logo_empresa.png" alt="Logo de Editorial Berlin">
             </div>
             <ul class="menu">
                 <li><a href="#">Promociones</a></li>
@@ -21,23 +21,21 @@
     </header>
 
     <main>
-        <section class="product-list">
-            <!-- Lista de productos -->
-            <div class="product">
+        <section class="product-detail">
+            <div class="product-images">
+                <!-- Imágenes del artículo aquí -->
                 <img src="producto1.jpg" alt="Producto 1">
-                <h2>Producto 1</h2>
-                <p class="price">$99.99</p>
-                <button>Comprar</button>
-            </div>
-
-            <div class="product">
                 <img src="producto2.jpg" alt="Producto 2">
-                <h2>Producto 2</h2>
-                <p class="price">$79.99</p>
+                <img src="producto3.jpg" alt="Producto 3">
+            </div>
+            <div class="product-info">
+                <h1>Nombre del Artículo</h1>
+                <p class="price">$99.99</p>
+                <p class="description">
+                    Descripción detallada del artículo. Aquí puedes incluir información sobre el producto, características, dimensiones, etc.
+                </p>
                 <button>Comprar</button>
             </div>
-
-            <!-- Puedes agregar más productos aquí -->
         </section>
     </main>
 
