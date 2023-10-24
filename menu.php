@@ -9,7 +9,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="logo_empresa.png" alt="Logo de Editorial Berlin">
+                <img src="https://editorialberlin.com/wp-content/uploads/2022/02/logo-berlin-1-e1629321593429-1.png" alt="Logo de Editorial Berlin">
             </div>
             <ul class="menu">
                 <li><a href="#">Promociones</a></li>
@@ -41,7 +41,7 @@
                     echo '<div class="product">';
                     echo '<img src="' . $row['imagen_url'] . '" alt="' . $row['nombre_articulo'] . '">';
                     echo '<h2>' . $row['nombre_articulo'] . '</h2>';
-                    echo '<p class="price">$' . $row['precio'] . '</p>';
+                    echo '<p class="price">S/' . $row['precio'] . '</p>';
                     echo '<button>Comprar</button>';
                     echo '</div>';
                 }
