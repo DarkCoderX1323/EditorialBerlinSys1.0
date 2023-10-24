@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Editorial Berlin - Tienda en Línea</title>
+    <title>Menú - Editorial Berlin</title>
     <link rel="stylesheet" href="menu.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="https://editorialberlin.com/wp-content/uploads/2022/02/logo-berlin-1-e1629321593429.png" alt="Logo de Editorial Berlin">
+                <img src="logo_empresa.png" alt="Logo de Editorial Berlin">
             </div>
             <ul class="menu">
                 <li><a href="#">Promociones</a></li>
@@ -22,22 +22,36 @@
 
     <main>
         <section class="product-list">
-            <!-- Lista de productos -->
-            <div class="product">
-                <img src="producto1.jpg" alt="Producto 1">
-                <h2>Producto 1</h2>
-                <p class="price">$99.99</p>
-                <button>Comprar</button>
-            </div>
+            <?php
+            // Conectar a la base de datos (reemplaza 'usuario', 'contraseña', 'base_de_datos' con tus propios valores)
+            $mysqli = new mysqli("localhost", "root", "", "editorialberlindb");
 
-            <div class="product">
-                <img src="producto2.jpg" alt="Producto 2">
-                <h2>Producto 2</h2>
-                <p class="price">$79.99</p>
-                <button>Comprar</button>
-            </div>
+            // Verificar la conexión a la base de datos
+            if ($mysqli->connect_error) {
+                die("Error de conexión a la base de datos: " . $mysqli->connect_error);
+            }
 
-            <!-- Puedes agregar más productos aquí -->
+            // Consulta para obtener los datos de los artículos
+            $query = "SELECT id, nombre_articulo, stock, estado, descripcion, precio, imagen_url FROM articulos";
+            $result = $mysqli->query($query);
+
+            // Mostrar los resultados
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="product">';
+                    echo '<img src="' . $row['imagen_url'] . '" alt="' . $row['nombre_articulo'] . '">';
+                    echo '<h2>' . $row['nombre_articulo'] . '</h2>';
+                    echo '<p class="price">$' . $row['precio'] . '</p>';
+                    echo '<button>Comprar</button>';
+                    echo '</div>';
+                }
+            } else {
+                echo '<p>No se encontraron artículos.</p>';
+            }
+
+            // Cerrar la conexión
+            $mysqli->close();
+            ?>
         </section>
     </main>
 
@@ -46,3 +60,4 @@
     </footer>
 </body>
 </html>
+
