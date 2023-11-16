@@ -14,7 +14,7 @@
             <ul class="menu">
                 <li><a href="#">Promociones</a></li>
                 <li><a href="#">Contacto</a></li>
-                <li><a href="#">Mi cuenta</a></li>
+                <li><a href="detalle_cliente.php">Mi cuenta</a></li>
                 <li><a href="#"><img src="carrito.png" alt="Carrito de compras"></a></li>
             </ul>
         </nav>
