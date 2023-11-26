@@ -9,13 +9,13 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="https://editorialberlin.com/wp-content/uploads/2022/02/logo-berlin-1-e1629321593429-1.png" alt="Logo de Editorial Berlin">
+                <img link="menu.php" src="https://editorialberlin.com/wp-content/uploads/2022/02/logo-berlin-1-e1629321593429-1.png" alt="Logo de Editorial Berlin">
             </div>
             <ul class="menu">
-                <li><a href="#">Promociones</a></li>
+                <li><a href="menu.php">Volver al menu</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a href="detalle_cliente.php">Mi cuenta</a></li>
-                <li><a href="#"><img src="carrito.png" alt="Carrito de compras"></a></li>
+                <li><a href="carrito_compra.php"><img src="carrito.png" alt="Carrito de compras"></a></li>
             </ul>
         </nav>
     </header>
@@ -42,7 +42,8 @@
                     echo '<img src="' . $row['imagen_url'] . '" alt="' . $row['nombre_articulo'] . '">';
                     echo '<h2>' . $row['nombre_articulo'] . '</h2>';
                     echo '<p class="price">S/' . $row['precio'] . '</p>';
-                    echo '<button>Comprar</button>';
+                    // Vinculación con el carrito
+                    echo '<a href="carrito_compra.php?product_id=' . $row['id'] . '">Comprar</a>';
                     echo '</div>';
                 }
             } else {
@@ -60,4 +61,3 @@
     </footer>
 </body>
 </html>
-

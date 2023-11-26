@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <div class="login-container">
-            <img src="logo_empresa.png" alt="Logo de Editorial Berlin" class="logo">
+            <img src="https://editorialberlin.com/wp-content/uploads/2022/02/logo-berlin-1-e1629321593429-1.png" alt="Logo de Editorial Berlin" class="logo">
             <h1 class="text-center">Iniciar Sesión</h1>
             <form action="login.php" method="POST">
                 <div class="form-group">
